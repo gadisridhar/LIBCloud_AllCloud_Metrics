@@ -83,7 +83,7 @@ def loadgcp_compute_data(datahex, cloudPayload, cfgDB):
                      project=str(cloudPayload[Names.GCP_ACCOUNT_NAME]),
                      datacenter=str(cloudPayload[Names.GCP_DATACENTER]))
 
-        # cls('tools-api-sa@cloud-devops-298213.iam.gserviceaccount.com','cloud-devops-298213-82bbca210566.pem',project='cloud-devops-298213',datacenter='us-west1-a')
+        # cls('="*************",.iam.gserviceaccount.com','="*************",.pem',project='="*************",',datacenter='us-west1-a')
 
         print("----------------------")
         nodeDetails = driver.list_nodes()
@@ -187,7 +187,7 @@ def loadaws_dns_data():
     try:
         # --------------------------------------------DNS DETAILS FOR AWS ACCOUNT
         cls_dns = get_dns_driver(DNSProvider.ROUTE53)
-        driver_dns = cls_dns('AKIATDZ2GFEQ2IDD6DVZ', 'h+w1dMRqEgjYANZzBYu4FtMbUmXOlMKIxNQvJrjx', region="us-west-2")
+        driver_dns = cls_dns('="*************",', 'h+="*************",', region="us-west-2")
         # ----------------------------------------------------------------------------
         print("----------------------")
         foo = driver_dns.list_zones()
@@ -223,7 +223,7 @@ def loadaws_pricing_data(datahex):
         # --------------------------------------------DNS DETAILS FOR AWS ACCOUNT
 
         cls = get_compute_driver(ComputeProvider.EC2)
-        driver = cls('AKIATDZ2GFEQ2IDD6DVZ', 'h+w1dMRqEgjYANZzBYu4FtMbUmXOlMKIxNQvJrjx', region="us-west-2")
+        driver = cls('="*************",', 'h+="*************",', region="us-west-2")
 
         sizes = driver.list_sizes()
         print(sizes)
@@ -278,7 +278,7 @@ def loadaws_sizing_data(datahex):
         # --------------------------------------------DNS DETAILS FOR AWS ACCOUNT
 
         cls = get_compute_driver(ComputeProvider.EC2)
-        driver = cls('AKIATDZ2GFEQ2IDD6DVZ', 'h+w1dMRqEgjYANZzBYu4FtMbUmXOlMKIxNQvJrjx', region="us-west-2")
+        driver = cls('="*************",', 'h+="*************",', region="us-west-2")
 
         sizes = driver.list_sizes()
         print(sizes)
