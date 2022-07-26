@@ -595,9 +595,9 @@ def connectSNOWFlakeInsertValues_bkp():
 #     print("----------------------------")
 
 # url = URL(
-#     account = 'GADICLOUD',
-#     user = 'GADICLOUD',
-#     database = 'SRIDHAR',
+#     account = 'GC',
+#     user = 'GC',
+#     database = 'DB',
 #     schema = 'PUBLIC',
 #     warehouse= 'TEST',
 #     role = 'ACCOUNTADMIN',
@@ -610,4 +610,4 @@ def connectSNOWFlakeInsertValues_bkp():
 
 if __name__ == '__main__':
     print("SETTING SNOWFLAKE API")
-    app.run(host="172.17.7.51", port=5008)
+    app.run(host="localhost", port=5008)
