@@ -639,7 +639,7 @@ def loadaws_sizing_data(datahex, cloudPayload,cfgDB):
 def loadaws_dns_data():
     # --------------------------------------------DNS DETAILS FOR AWS ACCOUNT
     cls_dns = get_dns_driver(DNSProvider.ROUTE53)
-    driver_dns = cls_dns('AKIATDZ2GFEQ2IDD6DVZ', 'h+w1dMRqEgjYANZzBYu4FtMbUmXOlMKIxNQvJrjx', region="us-west-2")
+    driver_dns = cls_dns('*************', 'h+**************', region="us-west-2")
     # ----------------------------------------------------------------------------
     print("----------------------")
     foo = driver_dns.list_zones()
