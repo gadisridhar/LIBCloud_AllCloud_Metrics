@@ -405,10 +405,10 @@ def loadazure_dns_data():
     try:
         # --------------------------------------------DRIVER DETAILS FOR AWS ACCOUNT
         cls = get_dns_driver(DNSProvider.AURORADNS)
-        driver_dns = cls(tenant_id="3d42674c-0075-48f9-948e-51dc832919c2",
-                         subscription_id="1653505e-bfc8-4bd5-951c-48cd41847a8d",
-                         key="fac5036d-f6cb-426d-af6a-b2de923f206c",
-                         secret="kp97Q~_R2SafFtvRvSav2QmyHfWxJ5qi~-PgK", region="eastus")
+        driver_dns = cls(tenant_id="*************",
+                         subscription_id="1*************",
+                         key="***********",
+                         secret="*************", region="eastus")
         foo = driver_dns.list_zones()
         print(foo)
 
@@ -439,9 +439,9 @@ def loadazure_pricing_data(datahex):
     try:
         # --------------------------------------------DNS DETAILS FOR AWS ACCOUNT
         cls = get_compute_driver(ComputeProvider.AZURE_ARM)
-        driver = cls(tenant_id="3d42674c-0075-48f9-948e-51dc832919c2",
-                     subscription_id="1653505e-bfc8-4bd5-951c-48cd41847a8d", key="fac5036d-f6cb-426d-af6a-b2de923f206c",
-                     secret="kp97Q~_R2SafFtvRvSav2QmyHfWxJ5qi~-PgK", region="eastus")
+        driver = cls(tenant_id="**************",
+                     subscription_id="="*************",", key="="*************",",
+                     secret="="*************",", region="eastus")
 
         sizes = driver.list_sizes()
         print(sizes)
@@ -910,32 +910,4 @@ if __name__ == '__main__':
 '''
 DETAILS SHOWS HOW TO CAPTURE THE AWS MACHINE DETAILS, UNDER ANY ACCOUNT WITH 
 
-[
-   {
-      "NODEID":"/subscriptions/1653505e-bfc8-4bd5-951c-48cd41847a8d/resourceGroups/MISTTESTRG/providers/Microsoft.Compute/disks/misttesmvm_disk1_df53710ad3d7430ebb13d8756ca420c6",
-      "NAME":"misttesmvm_disk1_df53710ad3d7430ebb13d8756ca420c6",
-      "SIZE":30,
-      "DRIVER":<libcloud.compute.drivers.azure_arm.AzureNodeDriver object at 0x0000021FA06CBE48>,
-      "EXTRA":{
-         "name":"misttesmvm_disk1_df53710ad3d7430ebb13d8756ca420c6",
-         "id":"/subscriptions/1653505e-bfc8-4bd5-951c-48cd41847a8d/resourceGroups/MISTTESTRG/providers/Microsoft.Compute/disks/misttesmvm_disk1_df53710ad3d7430ebb13d8756ca420c6",
-         "type":"Microsoft.Compute/disks",
-         "location":"eastus",
-         "properties":{
-            "accountType":"Premium_LRS",
-            "osType":"Linux",
-            "creationData":{
-               "createOption":"FromImage",
-               "imageReference":{
-                  "id":"/Subscriptions/76f3e1e5-21ef-4ad3-95bb-0d612d062959/Providers/Microsoft.Compute/Locations/eastus/Publishers/canonical/ArtifactTypes/VMImage/Offers/0001-com-ubuntu-server-focal/Skus/20_04-lts-gen2/Versions/20.04.202109290"
-               }
-            },
-            "diskSizeGB":30,
-            "timeCreated":"2021-10-20T22:34:04.8087665+00:00",
-            "provisioningState":"Succeeded",
-            "diskState":"Unattached"
-         }
-      }
-   }
-]
 '''
